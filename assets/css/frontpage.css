@@ -1,0 +1,8 @@
+.blueimp-gallery .modal-header a{
+    position: absolute;
+    z-index: 3 !important;
+    right: 15px;
+}
+#pricing .fullwidth-section{
+    padding-top: 0px;
+}

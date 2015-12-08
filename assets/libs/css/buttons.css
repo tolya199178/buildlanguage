@@ -1,0 +1,174 @@
+.btn, a.btn, a.btn:visited, a.btn:link {
+font-family: 'Raleway', sans-serif;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 12px;
+letter-spacing: 1.5px;
+text-shadow: 0;
+-webkit-box-shadow:0;
+box-shadow: 0;
+border: none;
+color: #FFF;
+border-radius: 2px;
+padding: 12px 22px;
+outline: 0 !important;
+margin-right: 3px;
+margin-bottom: 5px;
+-webkit-transition: background-color 0.25s;
+-moz-transition: background-color 0.25s;
+-o-transition: background-color 0.25s;
+transition: background-color 0.25s;
+}
+/* Button Small */
+.btn-sm, a.btn-sm, a.btn-sm:link {
+padding: 8px 18px;
+font-weight: 700;
+font-size: 11px;
+letter-spacing: 1px;
+}
+/* Button Large */
+.btn-lg, a.btn-lg, a.btn-lg:link {
+padding: 16px 26px;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1.5px;
+}
+.btn-default:active,
+.btn-primary:active,
+.btn-default.active,
+.btn-primary.active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/* DEFAULT BUTTON COLOR */
+.btn-default,a.btn-default {
+  background-color: #BBB;
+}
+.btn-default:hover,
+.btn-default:focus,
+a.btn-default:hover,
+a.btn-default:focus {
+  background-color: #F5F5F5;
+  color: #BBB;
+}
+.btn-default:active,
+.btn-default.active,
+a.btn-default:active,
+a.btn-default.active {
+  background-color: #F5F5F5;
+  color: #BBB;
+}
+/* PRIMARY BUTTON COLOR */
+.btn-primary,
+a.btn-primary {
+  background-color: #f56363;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+a.btn-primary:hover,
+a.btn-primary:focus {
+  background-color: #BBB;
+}
+.btn-primary:active,
+.btn-primary.active,
+a.btn-primary:active,
+a.btn-primary.active {
+  background-color: #BBB;
+}
+/* DARK BUTTON COLOR */
+.btn-dark,
+a.btn-dark {
+  background-color: #50525f;
+}
+.btn-dark:hover,
+.btn-dark:focus,
+a.btn-dark:hover,
+a.btn-dark:focus {
+  color: #FFF;
+  background-color: #BBB;
+}
+.btn-dark:active,
+.btn-dark.active,
+a.btn-dark:active,
+a.btn-dark.active {
+  color: #FFF;
+  background-color: #BBB;
+}
+/* WHITE BUTTON COLOR */
+.btn-white,a.btn-white {
+  background-color: #FFF;
+  color: #50525f;
+}
+.btn-white:hover,
+.btn-white:focus,
+a.btn-white:hover,
+a.btn-white:focus {
+background-color: #BBB;
+}
+.btn-white:active,
+.btn-white.active,
+a.btn-white:active,
+a.btn-white.active  {
+background-color: #BBB;
+}
+/* ADD .btn-outline TO BUTTONS TO GIVE THEM AN OUTLINED APPEARANCE */
+a.btn-outline, .btn-outline, a.btn-outline:link {
+border: 2px solid;
+background-color: transparent;
+}
+/* DEFAULT BUTTON COLOR */
+a.btn-outline.btn-default, .btn-outline.btn-default {
+border-color: #BBB;
+color: #BBB;
+background-color: transparent;
+}
+a.btn-outline.btn-default:hover, a.btn-outline.btn-default.active, a.btn-outline.btn-default:active, a.btn-outline.btn-default:focus,
+.btn-outline.btn-default:hover, .btn-outline.btn-default.active, .btn-outline.btn-default:active, .btn-outline.btn-default:focus {
+background-color: #BBB;
+color: #fff;
+}
+/* PRIMARY BUTTON COLOR */
+a.btn-outline.btn-primary, .btn-outline.btn-primary {
+border-color: #f56363;
+color: #f56363;
+background-color: transparent;
+}
+a.btn-outline.btn-primary:hover, a.btn-outline.btn-primary.active, a.btn-outline.btn-primary:active, a.btn-outline.btn-primary:focus,
+.btn-outline.btn-primary:hover, .btn-outline.btn-primary.active, .btn-outline.btn-primary:active, .btn-outline.btn-primary:focus {
+background-color: #f56363;
+color: #fff;
+}
+/* DARK BUTTON COLOR */
+a.btn-outline.btn-dark, .btn-outline.btn-dark {
+border-color: #50525f;
+color: #50525f;
+background-color: transparent;
+}
+a.btn-outline.btn-dark:hover, a.btn-outline.btn-dark.active, a.btn-outline.btn-dark:active, a.btn-outline.btn-dark:focus,
+.btn-outline.btn-dark:hover, .btn-outline.btn-dark.active, .btn-outline.btn-dark:active, .btn-outline.btn-dark:focus {
+background-color: #50525f;
+color: #fff;
+}
+/* WHITE BUTTON COLOR */
+a.btn-outline.btn-white, .btn-outline.btn-white {
+border-color: #FFF;
+color: #FFF;
+background-color: transparent;
+}
+a.btn-outline.btn-white:hover, a.btn-outline.btn-white.active, a.btn-outline.btn-white:active, a.btn-outline.btn-white:focus,
+.btn-outline.btn-white:hover, .btn-outline.btn-white.active, .btn-outline.btn-white:active, .btn-outline.btn-white:focus {
+background-color: #FFF;
+color: #f56363;
+}
+/* Button Default Size */
+.btn.btn-outline, a.btn.btn-outline {
+padding: 10px 20px;
+}
+/* Button Small */
+.btn-sm.btn-outline, a.btn-sm.btn-outline {
+padding: 6px 16px;
+}
+/* Button Large */
+.btn-lg.btn-outline, a.btn-lg.btn-outline {
+padding: 14px 24px;
+}
