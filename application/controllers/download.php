@@ -10,31 +10,30 @@ class download extends Front_Controller {
     }
 
     public function index() {
-        $path = $_FILES['tmp_name'];
-        set_include_path(dirname(__DIR__) . '/libraries/PHPExcel/');
-        /** PHPExcel_IOFactory */
-        include 'PHPExcel/IOFactory.php';
         $files = $_FILES['fileToUpload'];
         $inputFileName = $files['tmp_name'];
         if (is_file($inputFileName)) {
-
-            /*             * *
-             * Parse Excel File
+            /**
+             * Parse Csv Data
              */
-            $objPHPExcel = PHPExcel_IOFactory::load($inputFileName);
-            $sheetData = $objPHPExcel->getActiveSheet()->toArray(null, true, true, true);
+            $csvFile = file($inputFileName);
+            $csvData = [];
+            foreach ($csvFile as $line) {
+                $csvData[] = str_getcsv($line);
+            }
 
             /**
-             * Make Languge Data
+             * Make Language Data
              */
-            $data = array();
             $hrow = array();
-            foreach ($sheetData as $key => $row) {
-                if ($key == 1) {
+            foreach ($csvData as $key => $row) {
+                if ($key < 6) {
+                    continue;
+                } else if ($key == 6) {
                     //First HeaderRow
                     $hrow = $row;
                     foreach ($row as $col => $value) {
-                        if ($value && $col != 'A') {
+                        if ($value && $col != 0) {
                             $data[$value] = array();
                         }
                     }
@@ -43,16 +42,14 @@ class download extends Front_Controller {
                     $defaultValue = '';
                     foreach ($row as $col => $value) {
                         $value = trim($value);
-                        if ($col == 'A') {
+                        if ($col == 0) {
                             if (!$value) {
                                 break;
                             }
                             $key = $value;
+                            $defaultValue = $value;
                         } else {
                             $lang = $hrow[$col];
-                            if ($lang == 'en') {
-                                $defaultValue = $value;
-                            }
                             if (is_array($data[$lang])) {
                                 $data[$lang][$key] = $value ? $value : $defaultValue;
                             }
@@ -66,7 +63,16 @@ class download extends Front_Controller {
              */
             $this->load->library('zip');
             foreach ($data as $languageKey => $keyData) {
-                $fileName = sprintf('%s.json', $languageKey);
+                $langKey = explode(",", $languageKey);
+                $langCode = explode("-", trim($langKey[1]));
+                $lang = "";
+                if ($langCode[0] == "en") {
+                    $lang = "en";
+                } else {
+                    $lang = $langCode[1];
+                }
+
+                $fileName = sprintf('%s.json', strtolower($lang));
                 $fieContent = json_encode($keyData);
                 $this->zip->add_data($fileName, $fieContent);
             }

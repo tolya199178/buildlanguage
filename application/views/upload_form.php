@@ -8,7 +8,7 @@ define('ASSETS_LIBS_URL', '/assets/libs/');
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Excel to Json</title>
+        <title>CSV to Json</title>
 
         <!-- ================================ -->
         <!-- ========== CSS INCLUDES ========== -->
@@ -31,17 +31,17 @@ define('ASSETS_LIBS_URL', '/assets/libs/');
     <body>
         <div class="container">
             <div class="header clearfix">            
-                <h3 class="text-muted">Excel To Json</h3>
+                <h3 class="text-muted">Csv To Json</h3>
             </div>
 
             <form class="jumbotron" action="download" method="post" enctype="multipart/form-data">
                 <h2>Build Language File</h2>
-                <p class="lead">Select xlsx File to upload:<input type="file" name="fileToUpload" id="fileToUpload"></p>                
+                <p class="lead">Select csv File to upload:<input type="file" name="fileToUpload" id="fileToUpload"></p>                
                 <p><input class="btn btn-lg btn-success" type="submit" value="submit" name="submit"></p>
             </form>
 
             <footer class="footer">
-                <p>© 2015 Company, Inc.</p>
+                <p>© 2016 DataLocker Inc. All rights reserved</p>
             </footer>
 
         </div>       
